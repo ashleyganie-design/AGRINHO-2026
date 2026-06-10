@@ -1,1 +1,255 @@
 
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f5f8f2;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c8e6c9;
+}
+
+/* Seções */
+section {
+    padding: 60px 10%;
+}
+
+section:nth-child(even) {
+    background-color: #ffffff;
+}
+
+section:nth-child(odd) {
+    background-color: #f0f7ee;
+}
+
+/* Títulos */
+h2 {
+    color: #2e7d32;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+h3 {
+    color: #388e3c;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h4 {
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+
+/* Parágrafos */
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Imagens */
+img {
+    width: 100%;
+    max-width: 900px;
+    display: block;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Artigos */
+article {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #4caf50;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Listas */
+ul,
+ol {
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Formulário */
+form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Banner inicial */
+#inicio {
+    text-align: center;
+}
+
+#inicio h2 {
+    font-size: 2.5rem;
+}
+
+#inicio p:first-of-type {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Competências */
+#competencias ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    list-style: none;
+}
+
+#competencias li {
+    background-color: white;
+    padding: 15px;
+    border-left: 4px solid #4caf50;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    section {
+        padding: 40px 5%;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #inicio h2 {
+        font-size: 2rem;
+    }
+}
