@@ -1,255 +1,278 @@
-
-/* Reset */
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E RESETS
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #f9fbf9;
+    color: #333333;
+    line-height: 1.6;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f8f2;
-    color: #333;
+    padding-top: 80px; /* Evita que o topo suma sob o cabeçalho fixo */
 }
 
-/* Cabeçalho */
+/* ==========================================================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================================================== */
 header {
-    background-color: #2e7d32;
-    color: white;
-    padding: 20px 40px;
+    background-color: #1b4332; /* Verde escuro institucional */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    padding: 15px 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.logo h1 {
-    font-size: 2rem;
-    font-weight: bold;
+header .logo h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-nav a {
-    color: white;
+header nav ul li a {
+    color: #d8f3dc;
     text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #c8e6c9;
+header nav ul li a:hover {
+    color: #52b788; /* Verde folha brilhante para destaque */
 }
 
-/* Seções */
+/* ==========================================================================
+   3. ESTILIZAÇÃO DAS SEÇÕES
+   ========================================================================== */
 section {
     padding: 60px 10%;
-}
-
-section:nth-child(even) {
-    background-color: #ffffff;
-}
-
-section:nth-child(odd) {
-    background-color: #f0f7ee;
-}
-
-/* Títulos */
-h2 {
-    color: #2e7d32;
     margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* Alternância de cor de fundo nas seções para melhor ritmo visual */
+section:nth-child(even) {
+    background-color: #f4f7f4;
+}
+
+section h2 {
+    color: #1b4332;
     font-size: 2rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #52b788;
+    padding-bottom: 10px;
+    display: inline-block;
 }
 
-h3 {
-    color: #388e3c;
-    margin-top: 25px;
+section h3 {
+    color: #2d6a4f;
+    font-size: 1.4rem;
+    margin: 25px 0 15px 0;
+}
+
+section p {
     margin-bottom: 15px;
-}
-
-h4 {
-    color: #4caf50;
-    margin-bottom: 10px;
-}
-
-/* Parágrafos */
-p {
-    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #4a4a4a;
     text-align: justify;
 }
 
-/* Imagens */
-img {
-    width: 100%;
-    max-width: 900px;
+/* Imagens responsivas */
+section img {
+    max-width: 100%;
+    height: auto;
     display: block;
-    margin: 25px auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 20px auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
-/* Artigos */
-article {
-    background-color: white;
-    padding: 20px;
-    margin: 20px 0;
-    border-left: 5px solid #4caf50;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+/* Listas (ul e ol) */
+section ul, section ol {
+    margin: 15px 0 25px 30px;
 }
 
-/* Listas */
-ul,
-ol {
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-
-li {
+section li {
     margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+/* Grid de Artigos (Tecnologias Utilizadas) */
+#producao {
+    display: flex;
+    flex-direction: column;
+}
+
+#producao article {
+    background-color: #ffffff;
+    border-left: 4px solid #52b788;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#producao article h4 {
+    color: #1b4332;
+    font-size: 1.15rem;
+    margin-bottom: 5px;
+}
+
+/* Seção de Resposta em Destaque */
+#resposta {
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+}
+
+#resposta h2 {
+    border-bottom: none;
+    font-size: 1.6rem;
+    color: #1b5e20;
 }
 
 /* Tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin: 20px 0;
+    background-color: #ffffff;
 }
 
-table th {
-    background-color: #2e7d32;
+table, th, td {
+    border: 1px solid #dddddd;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #2d6a4f;
     color: white;
-    padding: 12px;
-}
-
-table td {
-    padding: 12px;
-    text-align: center;
-}
-
-table,
-th,
-td {
-    border: 1px solid #ccc;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9;
 }
 
-/* Formulário */
+/* ==========================================================================
+   4. FORMULÁRIO DE CONTATO
+   ========================================================================== */
 form {
-    background-color: white;
-    padding: 25px;
-    border-radius: 10px;
-    max-width: 700px;
-    margin: 0 auto 30px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px 0;
 }
 
-label {
-    font-weight: bold;
+form label {
+    font-weight: 600;
+    color: #2d6a4f;
+    display: block;
+    margin-bottom: 5px;
 }
 
-input,
-textarea {
+form input[type="text"],
+form input[type="email"],
+form textarea {
     width: 100%;
     padding: 12px;
-    margin-top: 5px;
-    border: 1px solid #bbb;
-    border-radius: 6px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    margin-bottom: 15px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
-textarea {
-    resize: vertical;
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #52b788;
+    box-shadow: 0 0 5px rgba(82, 183, 136, 0.4);
 }
 
-button {
-    background-color: #2e7d32;
+form button[type="submit"] {
+    background-color: #2d6a4f;
     color: white;
-    border: none;
     padding: 12px 25px;
-    font-size: 1rem;
-    border-radius: 6px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #1b5e20;
+form button[type="submit"]:hover {
+    background-color: #1b4332;
 }
 
-/* Rodapé */
+/* ==========================================================================
+   5. RODAPÉ (FOOTER)
+   ========================================================================== */
 footer {
-    background-color: #1b5e20;
-    color: white;
+    background-color: #112a1e;
+    color: #a3b899;
+    padding: 40px 10%;
     text-align: center;
-    padding: 30px;
+    font-size: 0.9rem;
 }
 
 footer p {
     margin-bottom: 10px;
-    text-align: center;
 }
 
-/* Banner inicial */
-#inicio {
-    text-align: center;
+footer p:last-child {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #748c67;
 }
 
-#inicio h2 {
-    font-size: 2.5rem;
-}
-
-#inicio p:first-of-type {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* Competências */
-#competencias ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-    list-style: none;
-}
-
-#competencias li {
-    background-color: white;
-    padding: 15px;
-    border-left: 4px solid #4caf50;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-}
-
-/* Responsividade */
+/* ==========================================================================
+   6. RESPONSIVIDADE (MOBILE-FIRST ADAPTATION)
+   ========================================================================== */
 @media (max-width: 768px) {
-
     header {
         flex-direction: column;
-        text-align: center;
+        padding: 10px;
     }
 
-    nav ul {
-        flex-direction: column;
-        margin-top: 15px;
+    header nav ul {
+        margin-top: 10px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    body {
+        padding-top: 120px; /* Ajuste para o cabeçalho que ficou maior no mobile */
     }
 
     section {
         padding: 40px 5%;
     }
 
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    #inicio h2 {
-        font-size: 2rem;
+    section h2 {
+        font-size: 1.6rem;
     }
 }
