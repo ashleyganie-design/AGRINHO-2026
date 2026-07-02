@@ -83,4 +83,30 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.backgroundColor = 'transparent';
         });
     });
+    
+    // 5. Flashcards Interativos
+    // Animação ao passar o mouse e suporte a teclado para acessibilidade
+    const flashcards = document.querySelectorAll('.flashcard');
+
+    flashcards.forEach(card => {
+        // Efeito visual ao passar o mouse
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'scale(1.03)';
+            card.style.transition = 'transform 0.3s ease';
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'scale(1)';
+        });
+
+        // Suporte para teclado (acessibilidade)
+        // Permite virar o card com Enter ou Espaço
+        card.setAttribute('tabindex', '0');
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.classList.toggle('flipped');
+            }
+        });
+    });
 });
