@@ -382,5 +382,10 @@ footer p:last-child {
 
     section h2 {
         font-size: 1.6rem;
+       }
+         .flashcard {
+        width: 90%;
+        max-width: 320px;
     }
 }
+   
