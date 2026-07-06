@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,7 +6,6 @@
     <title>Agro Forte - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
-    <script src="script.js"></script>):
 <body>
 
     <!-- Cabeçalho -->
@@ -28,7 +26,7 @@
         </nav>
     </header>
 
-      <!-- Banner Principal -->
+    <!-- Banner Principal -->
     <section id="inicio">
         <h2>Agro Forte, Futuro Sustentável</h2>
         <p>Produzindo com tecnologia, preservando para o amanhã.</p>
@@ -118,7 +116,7 @@
     <section id="sustentabilidade">
         <h2>Sustentabilidade no Campo</h2>
 
-        <img src="img/agricultura-regenerativa.jpg"
+        <img src="assets/agricultura-regenerativa.jpg"
              alt="Mãos segurando terra fértil com uma muda crescendo">
 
         <h3>Práticas Ecológicas</h3>
@@ -146,7 +144,7 @@
     <section id="desafios">
         <h2>Desafios Ambientais</h2>
 
-        <img src="img/preservacao.jpg"
+        <img src="assets/preservacao.jpg"
              alt="Área preservada ao lado de área agrícola">
 
         <h3>Problemas Atuais</h3>
@@ -296,73 +294,71 @@ Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pe
         </p>
     </section>
 
-        </ul>
+    <!-- Flashcards Interativos -->
+    <section id="flashcards">
+        <h2>📚 Flashcards — Teste seus Conhecimentos</h2>
+        <p class="flashcards-intro">Clique nos cards para revelar a resposta!</p>
+
+        <div class="flashcards-container">
+
+            <!-- Flashcard 1 -->
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h3>❓ O que é Agricultura de Precisão?</h3>
+                        <p class="hint">Clique para ver a resposta</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <h3>✅ Resposta</h3>
+                        <p>
+                            É o uso de <strong>sensores, drones e análise de dados</strong>
+                            para otimizar o uso de insumos, reduzindo custos e aumentando
+                            a produtividade no campo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 2 -->
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h3>❓ O que é Plantio Direto?</h3>
+                        <p class="hint">Clique para ver a resposta</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <h3>✅ Resposta</h3>
+                        <p>
+                            Técnica de <strong>conservação do solo</strong> onde a palhada
+                            da colheita anterior é mantida na superfície, evitando a erosão
+                            e preservando a umidade e os nutrientes da terra.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flashcard 3 -->
+            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <h3>❓ Como a energia solar ajuda o agronegócio?</h3>
+                        <p class="hint">Clique para ver a resposta</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <h3>✅ Resposta</h3>
+                        <p>
+                            A energia solar <strong>reduz custos com eletricidade</strong>,
+                            diminui a dependência de combustíveis fósseis e torna as
+                            propriedades rurais mais <strong>sustentáveis e autossuficientes</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!-- Rodapé -->
-    <!-- Flashcards Interativos -->
-<section id="flashcards">
-    <h2>📚 Flashcards — Teste seus Conhecimentos</h2>
-    <p class="flashcards-intro">Clique nos cards para revelar a resposta!</p>
-
-    <div class="flashcards-container">
-
-        <!-- Flashcard 1 -->
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-inner">
-                <div class="flashcard-front">
-                    <h3>❓ O que é Agricultura de Precisão?</h3>
-                    <p class="hint">Clique para ver a resposta</p>
-                </div>
-                <div class="flashcard-back">
-                    <h3>✅ Resposta</h3>
-                    <p>
-                        É o uso de <strong>sensores, drones e análise de dados</strong>
-                        para otimizar o uso de insumos, reduzindo custos e aumentando
-                        a produtividade no campo.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Flashcard 2 -->
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-inner">
-                <div class="flashcard-front">
-                    <h3>❓ O que é Plantio Direto?</h3>
-                    <p class="hint">Clique para ver a resposta</p>
-                </div>
-                <div class="flashcard-back">
-                    <h3>✅ Resposta</h3>
-                    <p>
-                        Técnica de <strong>conservação do solo</strong> onde a palhada
-                        da colheita anterior é mantida na superfície, evitando a erosão
-                        e preservando a umidade e os nutrientes da terra.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Flashcard 3 -->
-        <div class="flashcard" onclick="this.classList.toggle('flipped')">
-            <div class="flashcard-inner">
-                <div class="flashcard-front">
-                    <h3>❓ Como a energia solar ajuda o agronegócio?</h3>
-                    <p class="hint">Clique para ver a resposta</p>
-                </div>
-                <div class="flashcard-back">
-                    <h3>✅ Resposta</h3>
-                    <p>
-                        A energia solar <strong>reduz custos com eletricidade</strong>,
-                        diminui a dependência de combustíveis fósseis e torna as
-                        propriedades rurais mais <strong>sustentáveis e autossuficientes</strong>.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
     <footer>
         <p>
             Endereço: Av. Sustentável, 1000, Brasília - DF
@@ -385,7 +381,8 @@ Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pe
         </p>
     </footer>
 
+    <!-- Script no final do body (melhor prática de performance) -->
+    <script src="script.js"></script>
+
 </body>
 </html>
-```
-
