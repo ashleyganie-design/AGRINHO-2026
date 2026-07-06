@@ -5,299 +5,539 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agro Forte - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Barra de progresso de scroll -->
+    <div class="scroll-progress-bar"></div>
 
     <!-- Cabeçalho -->
     <header>
         <div class="logo">
-            <h1>AGRO FORTE</h1>
+            <i class="fas fa-leaf"></i>
+            <h1>AGRO <span class="highlight">FORTE</span></h1>
+            <i class="fas fa-seedling"></i>
         </div>
 
         <nav>
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#producao">Produção</a></li>
-                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="#desafios">Desafios</a></li>
-                <li><a href="#futuro">Futuro</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#producao"><i class="fas fa-tractor"></i> Produção</a></li>
+                <li><a href="#sustentabilidade"><i class="fas fa-recycle"></i> Sustentabilidade</a></li>
+                <li><a href="#desafios"><i class="fas fa-exclamation-triangle"></i> Desafios</a></li>
+                <li><a href="#futuro"><i class="fas fa-rocket"></i> Futuro</a></li>
+                <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
             </ul>
         </nav>
+
+        <button class="mobile-menu-btn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
-    <!-- Banner Principal -->
-    <section id="inicio">
-        <h2>Agro Forte, Futuro Sustentável</h2>
-        <p>Produzindo com tecnologia, preservando para o amanhã.</p>
+    <!-- Banner Principal / Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="hero-title">
+                    <span class="title-line">Agro Forte</span>
+                    <span class="title-line subtitle">Futuro Sustentável</span>
+                </h2>
+                <p class="hero-subtitle">Produzindo com tecnologia, preservando para o amanhã.</p>
+                <p class="hero-description">
+                    Bem-vindo ao nosso site! Aqui, exploramos como o agronegócio pode crescer
+                    economicamente sem comprometer os recursos naturais das futuras gerações.
+                    Descubra como tecnologias sustentáveis e práticas ecológicas podem
+                    transformar o campo.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#producao" class="btn btn-primary">
+                        <i class="fas fa-seedling"></i> Conhecer Tecnologias
+                    </a>
+                    <a href="#contato" class="btn btn-secondary">
+                        <i class="fas fa-comments"></i> Fale Conosco
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/drone.jpg" 
+                         alt="Campo verdejante com soja, milho e drone sobrevoando a plantação"
+                         class="hero-img">
+                    <div class="floating-badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Tecnologia de Ponta</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- Imagem do campo com drone -->
-        <img src="assets/drone.jpg" 
-             alt="Campo verdejante com soja, milho e drone sobrevoando a plantação">
+        <!-- Stats Section -->
+        <div class="stats-container">
+            <div class="stat-card" data-count="26">
+                <i class="fas fa-chart-line"></i>
+                <div class="stat-number"><span class="counter">0</span>%</div>
+                <div class="stat-label">do PIB Nacional</div>
+            </div>
+            <div class="stat-card" data-count="3.7">
+                <i class="fas fa-arrow-up"></i>
+                <div class="stat-number"><span class="counter">0</span>%</div>
+                <div class="stat-label">Crescimento em 2021</div>
+            </div>
+            <div class="stat-card" data-count="1000000">
+                <i class="fas fa-users"></i>
+                <div class="stat-number"><span class="counter">0</span>+</div>
+                <div class="stat-label">Empregos Gerados</div>
+            </div>
+            <div class="stat-card" data-count="40">
+                <i class="fas fa-solar-panel"></i>
+                <div class="stat-number"><span class="counter">0</span>%</div>
+                <div class="stat-label">Energia Solar</div>
+            </div>
+        </div>
 
-        <p>
-            Bem-vindo ao nosso site! Aqui, exploramos como o agronegócio pode crescer
-            economicamente sem comprometer os recursos naturais das futuras gerações.
-            Descubra como tecnologias sustentáveis e práticas ecológicas podem
-            transformar o campo.
-        </p>
-
-        <!-- Imagem da agricultora com painéis solares -->
-        <img src="assets/paineis-solares-1.jpg" 
-             alt="Painel solar em propriedade rural com agricultora sorrindo">
-
-        <p>
-            Esta imagem mostra a integração de energias renováveis no agronegócio,
-            destacando a importância da sustentabilidade.
-        </p>
+        <!-- Imagem secundária -->
+        <div class="secondary-image-section">
+            <div class="image-wrapper reverse">
+                <img src="assets/paineis-solares-1.jpg" 
+                     alt="Painel solar em propriedade rural com agricultora sorrindo"
+                     class="secondary-img">
+                <div class="image-overlay">
+                    <i class="fas fa-sun"></i>
+                    <h3>Energia Renovável</h3>
+                    <p>Integração de painéis solares no agronegócio</p>
+                </div>
+            </div>
+        </div>
     </section>
     
     <!-- Importância do Agronegócio -->
-    <section id="importancia">
-        <h2>Importância do Agronegócio para a Economia</h2>
+    <section id="importancia" class="section-alt">
+        <div class="section-header">
+            <i class="fas fa-globe-americas"></i>
+            <h2>Importância do Agronegócio para a Economia</h2>
+        </div>
 
-        <p>
-            O agronegócio é um dos pilares da economia brasileira, responsável por
-            uma significativa parcela do PIB. Ele gera empregos, movimenta o comércio
-            e é essencial para a segurança alimentar.
-        </p>
+        <div class="content-grid">
+            <div class="text-content">
+                <p>
+                    O agronegócio é um dos pilares da economia brasileira, responsável por
+                    uma significativa parcela do PIB. Ele gera empregos, movimenta o comércio
+                    e é essencial para a segurança alimentar.
+                </p>
 
-        <p>
-            O agronegócio brasileiro cresceu 3,7% em 2021, contribuindo com cerca de
-            26% do PIB nacional.
-        </p>
+                <div class="highlight-box">
+                    <i class="fas fa-chart-bar"></i>
+                    <div>
+                        <h4>Crescimento Expressivo</h4>
+                        <p>O agronegócio brasileiro cresceu 3,7% em 2021, contribuindo com cerca de 26% do PIB nacional.</p>
+                    </div>
+                </div>
 
-        <p>
-            O setor é responsável por milhões de empregos diretos e indiretos,
-            além de ser um dos principais motores da balança comercial brasileira.
-        </p>
+                <p>
+                    O setor é responsável por milhões de empregos diretos e indiretos,
+                    além de ser um dos principais motores da balança comercial brasileira.
+                </p>
+            </div>
+            <div class="visual-content">
+                <div class="icon-grid">
+                    <div class="icon-box">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Geração de Empregos</span>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <span>Movimentação Econômica</span>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-utensils"></i>
+                        <span>Segurança Alimentar</span>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Exportação</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Produção Agrícola -->
     <section id="producao">
-        <h2>Produção Agrícola</h2>
+        <div class="section-header">
+            <i class="fas fa-microchip"></i>
+            <h2>Produção Agrícola</h2>
+            <p class="section-subtitle">Tecnologias Utilizadas</p>
+        </div>
 
-        <h3>Tecnologias Utilizadas</h3>
+        <div class="tech-grid">
+            <article class="tech-card">
+                <div class="card-icon">
+                    <i class="fas fa-satellite-dish"></i>
+                </div>
+                <h4>Agricultura de Precisão</h4>
+                <p>
+                    Utiliza sensores e análise de dados para otimizar o uso de insumos,
+                    reduzindo custos e aumentando a produtividade.
+                </p>
+                <div class="card-footer">
+                    <span class="tag">Eficiência</span>
+                    <span class="tag">Dados</span>
+                </div>
+            </article>
 
-        <article>
-            <h4>Agricultura de Precisão</h4>
-            <p>
-                Utiliza sensores e análise de dados para otimizar o uso de insumos,
-                reduzindo custos e aumentando a produtividade.
-            </p>
-        </article>
+            <article class="tech-card">
+                <div class="card-icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h4>Irrigação Inteligente</h4>
+                <p>
+                    Sistemas automatizados ajustam a irrigação de acordo com as
+                    necessidades das plantas, economizando água.
+                </p>
+                <div class="card-footer">
+                    <span class="tag">Economia</span>
+                    <span class="tag">Água</span>
+                </div>
+            </article>
 
-        <article>
-            <h4>Irrigação Inteligente</h4>
-            <p>
-                Sistemas automatizados ajustam a irrigação de acordo com as
-                necessidades das plantas, economizando água.
-            </p>
-        </article>
+            <article class="tech-card">
+                <div class="card-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h4>Drones Agrícolas</h4>
+                <p>
+                    Utilizados para monitoramento das culturas e aplicação precisa
+                    de defensivos e fertilizantes.
+                </p>
+                <div class="card-footer">
+                    <span class="tag">Monitoramento</span>
+                    <span class="tag">Precisão</span>
+                </div>
+            </article>
 
-        <article>
-            <h4>Drones Agrícolas</h4>
-            <p>
-                Utilizados para monitoramento das culturas e aplicação precisa
-                de defensivos e fertilizantes.
-            </p>
-        </article>
-
-        <article>
-            <h4>Energia Renovável</h4>
-            <p>
-                Aplicação de energia solar e eólica para reduzir custos e impactos
-                ambientais nas propriedades rurais.
-            </p>
-        </article>
+            <article class="tech-card">
+                <div class="card-icon">
+                    <i class="fas fa-solar-panel"></i>
+                </div>
+                <h4>Energia Renovável</h4>
+                <p>
+                    Aplicação de energia solar e eólica para reduzir custos e impactos
+                    ambientais nas propriedades rurais.
+                </p>
+                <div class="card-footer">
+                    <span class="tag">Sustentável</span>
+                    <span class="tag">Limpa</span>
+                </div>
+            </article>
+        </div>
     </section>
 
     <!-- Sustentabilidade -->
-    <section id="sustentabilidade">
-        <h2>Sustentabilidade no Campo</h2>
+    <section id="sustentabilidade" class="section-alt">
+        <div class="section-header">
+            <i class="fas fa-leaf"></i>
+            <h2>Sustentabilidade no Campo</h2>
+        </div>
 
-        <img src="assets/agricultura-regenerativa.jpg"
-             alt="Mãos segurando terra fértil com uma muda crescendo">
+        <div class="content-row">
+            <div class="image-side">
+                <div class="image-wrapper">
+                    <img src="assets/agricultura-regenerativa.jpg"
+                         alt="Mãos segurando terra fértil com uma muda crescendo">
+                    <div class="image-badge">
+                        <i class="fas fa-heart"></i>
+                        <span>Cuidado com a Terra</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-side">
+                <h3><i class="fas fa-check-circle"></i> Práticas Ecológicas</h3>
+                <ul class="feature-list">
+                    <li><i class="fas fa-sync-alt"></i> Rotação de culturas</li>
+                    <li><i class="fas fa-layer-group"></i> Cobertura vegetal do solo</li>
+                    <li><i class="fas fa-seedling"></i> Plantio direto</li>
+                    <li><i class="fas fa-tree"></i> Conservação da biodiversidade</li>
+                </ul>
 
-        <h3>Práticas Ecológicas</h3>
-        <ul>
-            <li>Rotação de culturas.</li>
-            <li>Cobertura vegetal do solo.</li>
-            <li>Plantio direto.</li>
-            <li>Conservação da biodiversidade.</li>
-        </ul>
+                <h3><i class="fas fa-mountain"></i> Conservação do Solo</h3>
+                <p>
+                    Técnicas como o plantio direto previnem a erosão e melhoram a estrutura
+                    do solo.
+                </p>
 
-        <h3>Conservação do Solo</h3>
-        <p>
-            Técnicas como o plantio direto previnem a erosão e melhoram a estrutura
-            do solo.
-        </p>
-
-        <h3>Energias Limpas</h3>
-        <p>
-            O uso de painéis solares e turbinas eólicas ajuda a suprir a demanda
-            energética das propriedades rurais.
-        </p>
+                <h3><i class="fas fa-wind"></i> Energias Limpas</h3>
+                <p>
+                    O uso de painéis solares e turbinas eólicas ajuda a suprir a demanda
+                    energética das propriedades rurais.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Desafios Ambientais -->
     <section id="desafios">
-        <h2>Desafios Ambientais</h2>
+        <div class="section-header">
+            <i class="fas fa-exclamation-circle"></i>
+            <h2>Desafios Ambientais</h2>
+        </div>
 
-        <img src="assets/preservacao.jpg"
-             alt="Área preservada ao lado de área agrícola">
+        <div class="content-row reverse">
+            <div class="text-side">
+                <div class="alert-box">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Problemas Atuais</h3>
+                    <ul class="problem-list">
+                        <li><i class="fas fa-tree"></i> Desmatamento</li>
+                        <li><i class="fas fa-faucet"></i> Uso excessivo da água</li>
+                        <li><i class="fas fa-smog"></i> Emissão de carbono</li>
+                    </ul>
+                </div>
 
-        <h3>Problemas Atuais</h3>
-
-        <ul>
-            <li>Desmatamento.</li>
-            <li>Uso excessivo da água.</li>
-            <li>Emissão de carbono.</li>
-        </ul>
-
-        <h3>Consequências</h3>
-
-        <p>
-            A degradação ambiental afeta a produtividade, a qualidade do solo
-            e compromete os recursos naturais das futuras gerações.
-        </p>
+                <h3><i class="fas fa-chart-line"></i> Consequências</h3>
+                <p>
+                    A degradação ambiental afeta a produtividade, a qualidade do solo
+                    e compromete os recursos naturais das futuras gerações.
+                </p>
+            </div>
+            <div class="image-side">
+                <div class="image-wrapper">
+                    <img src="assets/preservacao.jpg"
+                         alt="Área preservada ao lado de área agrícola">
+                    <div class="image-badge warning">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Preservação é Essencial</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Soluções e Futuro -->
-    <section id="futuro">
-        <h2>Soluções e Futuro</h2>
+    <section id="futuro" class="section-alt">
+        <div class="section-header">
+            <i class="fas fa-rocket"></i>
+            <h2>Soluções e Futuro</h2>
+        </div>
 
-        <h3>Inovações</h3>
+        <div class="solutions-grid">
+            <div class="solution-card">
+                <div class="solution-icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3>Inovações</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Biotecnologia</li>
+                    <li><i class="fas fa-check"></i> Agricultura vertical</li>
+                    <li><i class="fas fa-check"></i> Monitoramento por satélite</li>
+                    <li><i class="fas fa-check"></i> Inteligência artificial aplicada ao campo</li>
+                </ul>
+            </div>
 
-        <ul>
-            <li>Biotecnologia.</li>
-            <li>Agricultura vertical.</li>
-            <li>Monitoramento por satélite.</li>
-            <li>Inteligência artificial aplicada ao campo.</li>
-        </ul>
+            <div class="solution-card featured">
+                <div class="solution-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h3>Agricultura Regenerativa</h3>
+                <p>
+                    Métodos que restauram a saúde do solo e promovem a biodiversidade.
+                </p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 75%"></div>
+                </div>
+                <span class="progress-label">75% de adoção até 2030</span>
+            </div>
 
-        <h3>Agricultura Regenerativa</h3>
-
-        <p>
-            Métodos que restauram a saúde do solo e promovem a biodiversidade.
-        </p>
-
-        <h3>Papel da Tecnologia</h3>
-
-        <p>
-            A tecnologia é fundamental para monitorar e reduzir os impactos
-            ambientais, permitindo uma produção mais eficiente e sustentável.
-        </p>
+            <div class="solution-card">
+                <div class="solution-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Papel da Tecnologia</h3>
+                <p>
+                    A tecnologia é fundamental para monitorar e reduzir os impactos
+                    ambientais, permitindo uma produção mais eficiente e sustentável.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Resposta da Pesquisa -->
-    <section id="resposta">
-        <h2>
-            Como o agronegócio pode crescer economicamente sem comprometer os recursos
-            naturais das futuras gerações?
-        </h2>
+    <section id="resposta" class="highlight-section">
+        <div class="section-header">
+            <i class="fas fa-lightbulb"></i>
+            <h2>Como o agronegócio pode crescer economicamente sem comprometer os recursos naturais?</h2>
+        </div>
 
-        <p>
-            O agronegócio pode crescer economicamente sem comprometer os recursos
-            naturais das futuras gerações ao adotar tecnologias sustentáveis,
-            como drones e agricultura de precisão, que melhoram a eficiência da
-            produção.
-        </p>
-
-        <p>
-            Práticas como rotação de culturas e plantio direto ajudam a preservar
-            a saúde do solo, enquanto sistemas de irrigação inteligente economizam água.
-        </p>
-
-        <p>
-            O investimento em energias renováveis, como solar e eólica, reduz a
-            dependência de combustíveis fósseis.
-        </p>
-
-        <p>
-            Além disso, a educação dos agricultores e o apoio governamental por meio
-            de incentivos sustentáveis são essenciais para aumentar a produtividade
-            preservando os recursos naturais.
-        </p>
+        <div class="answer-grid">
+            <div class="answer-card">
+                <i class="fas fa-robot"></i>
+                <h4>Tecnologias Sustentáveis</h4>
+                <p>
+                    Drones e agricultura de precisão melhoram a eficiência da produção.
+                </p>
+            </div>
+            <div class="answer-card">
+                <i class="fas fa-seedling"></i>
+                <h4>Práticas Conservacionistas</h4>
+                <p>
+                    Rotação de culturas e plantio direto preservam a saúde do solo.
+                </p>
+            </div>
+            <div class="answer-card">
+                <i class="fas fa-sun"></i>
+                <h4>Energias Renováveis</h4>
+                <p>
+                    Solar e eólica reduzem a dependência de combustíveis fósseis.
+                </p>
+            </div>
+            <div class="answer-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h4>Educação e Incentivos</h4>
+                <p>
+                    Educação dos agricultores e apoio governamental são essenciais.
+                </p>
+            </div>
+        </div>
     </section>
 
     <!-- Gráficos -->
-    <section id="graficos">
-        <h2>Gráficos</h2>
+    <section id="graficos" class="section-alt">
+        <div class="section-header">
+            <i class="fas fa-chart-pie"></i>
+            <h2>Gráficos e Dados</h2>
+        </div>
 
-        <article>
-            <h3>Evolução da Produtividade x Uso de Insumos</h3>
+        <div class="charts-grid">
+            <article class="chart-card">
+                <h3><i class="fas fa-chart-line"></i> Evolução da Produtividade x Uso de Insumos</h3>
+                <div class="chart-container">
+                    <div class="chart-bar-group">
+                        <div class="chart-year">2020</div>
+                        <div class="chart-bars">
+                            <div class="chart-bar" data-width="80" style="width: 80%">
+                                <span class="bar-label">Produtividade: 80</span>
+                            </div>
+                            <div class="chart-bar insumo" data-width="100" style="width: 100%">
+                                <span class="bar-label">Insumos: 100</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-year">2025</div>
+                        <div class="chart-bars">
+                            <div class="chart-bar" data-width="95" style="width: 95%">
+                                <span class="bar-label">Produtividade: 95</span>
+                            </div>
+                            <div class="chart-bar insumo" data-width="70" style="width: 70%">
+                                <span class="bar-label">Insumos: 70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
 
-            <table border="1">
-                <tr>
-                    <th>Ano</th>
-                    <th>Produtividade</th>
-                    <th>Insumos</th>
-                </tr>
-
-                <tr>
-                    <td>2020</td>
-                    <td>80</td>
-                    <td>100</td>
-                </tr>
-
-                <tr>
-                    <td>2025</td>
-                    <td>95</td>
-                    <td>70</td>
-                </tr>
-            </table>
-        </article>
-
-        <article>
-            <h3>Matriz Energética no Campo</h3>
-
-            <ul>
-                <li>Energia Solar: 40%</li>
-                <li>Biomassa: 35%</li>
-                <li>Energia Convencional: 25%</li>
-            </ul>
-        </article>
+            <article class="chart-card">
+                <h3><i class="fas fa-chart-pie"></i> Matriz Energética no Campo</h3>
+                <div class="pie-chart-container">
+                    <div class="pie-chart">
+                        <div class="pie-segment solar" style="--percentage: 40">
+                            <span>40%</span>
+                        </div>
+                        <div class="pie-segment biomassa" style="--percentage: 35">
+                            <span>35%</span>
+                        </div>
+                        <div class="pie-segment convencional" style="--percentage: 25">
+                            <span>25%</span>
+                        </div>
+                    </div>
+                    <div class="pie-legend">
+                        <div class="legend-item">
+                            <span class="legend-color solar"></span>
+                            <span>Energia Solar: 40%</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color biomassa"></span>
+                            <span>Biomassa: 35%</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color convencional"></span>
+                            <span>Energia Convencional: 25%</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
     </section>
 
     <!-- Contato -->
     <section id="contato">
-        <h2>Contato e Conscientização</h2>
+        <div class="section-header">
+            <i class="fas fa-envelope-open-text"></i>
+            <h2>Contato e Conscientização</h2>
+        </div>
 
-        <form>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3><i class="fas fa-info-circle"></i> Vamos Conversar</h3>
+                <p>
+                    Obrigado por visitar o Agro Forte. Sua participação é o primeiro passo
+                    para um campo mais produtivo e consciente. Juntos, cultivamos o amanhã.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Sustentável, 1000, Brasília - DF</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(61) 9989-5330</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@agroforte.com.br</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-share-alt"></i>
+                        <span>@AgroForteOficial</span>
+                    </div>
+                </div>
+            </div>
 
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome"
-                   placeholder="João Silva"><br><br>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nome"><i class="fas fa-user"></i> Nome:</label>
+                    <input type="text" id="nome" placeholder="João Silva" required>
+                </div>
 
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email"
-                   placeholder="contato@fazendasuave.com.br"><br><br>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
+                    <input type="email" id="email" placeholder="contato@fazendasuave.com.br" required>
+                </div>
 
-            <label for="assunto">Assunto:</label><br>
-            <input type="text" id="assunto"
-                   placeholder="Dúvida sobre agricultura regenerativa"><br><br>
+                <div class="form-group">
+                    <label for="assunto"><i class="fas fa-tag"></i> Assunto:</label>
+                    <input type="text" id="assunto" placeholder="Dúvida sobre agricultura regenerativa" required>
+                </div>
 
-            <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" rows="6">
-Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pequena propriedade. Parabéns pelo conteúdo do site!
-            </textarea><br><br>
+                <div class="form-group">
+                    <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem:</label>
+                    <textarea id="mensagem" rows="6" placeholder="Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pequena propriedade. Parabéns pelo conteúdo do site!" required></textarea>
+                </div>
 
-            <button type="submit">Enviar Mensagem</button>
-
-        </form>
-
-        <p>
-            Obrigado por visitar o Agro Forte. Sua participação é o primeiro passo
-            para um campo mais produtivo e consciente. Juntos, cultivamos o amanhã.
-            Dúvidas ou parcerias? Fale conosco!
-        </p>
+                <button type="submit" class="btn btn-primary btn-full">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                </button>
+            </form>
+        </div>
     </section>
 
     <!-- Flashcards Interativos -->
-    <section id="flashcards">
-        <h2>📚 Flashcards — Teste seus Conhecimentos</h2>
-        <p class="flashcards-intro">Clique nos cards para revelar a resposta!</p>
+    <section id="flashcards" class="section-alt">
+        <div class="section-header">
+            <i class="fas fa-brain"></i>
+            <h2>Flashcards — Teste seus Conhecimentos</h2>
+            <p class="section-subtitle">Clique nos cards para revelar a resposta!</p>
+        </div>
 
         <div class="flashcards-container">
 
@@ -305,11 +545,14 @@ Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pe
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
-                        <h3>❓ O que é Agricultura de Precisão?</h3>
-                        <p class="hint">Clique para ver a resposta</p>
+                        <div class="card-number">1</div>
+                        <i class="fas fa-question-circle"></i>
+                        <h3>O que é Agricultura de Precisão?</h3>
+                        <p class="hint"><i class="fas fa-hand-pointer"></i> Clique para ver a resposta</p>
                     </div>
                     <div class="flashcard-back">
-                        <h3>✅ Resposta</h3>
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Resposta</h3>
                         <p>
                             É o uso de <strong>sensores, drones e análise de dados</strong>
                             para otimizar o uso de insumos, reduzindo custos e aumentando
@@ -323,11 +566,14 @@ Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pe
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
-                        <h3>❓ O que é Plantio Direto?</h3>
-                        <p class="hint">Clique para ver a resposta</p>
+                        <div class="card-number">2</div>
+                        <i class="fas fa-question-circle"></i>
+                        <h3>O que é Plantio Direto?</h3>
+                        <p class="hint"><i class="fas fa-hand-pointer"></i> Clique para ver a resposta</p>
                     </div>
                     <div class="flashcard-back">
-                        <h3>✅ Resposta</h3>
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Resposta</h3>
                         <p>
                             Técnica de <strong>conservação do solo</strong> onde a palhada
                             da colheita anterior é mantida na superfície, evitando a erosão
@@ -341,11 +587,14 @@ Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pe
             <div class="flashcard" onclick="this.classList.toggle('flipped')">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
-                        <h3>❓ Como a energia solar ajuda o agronegócio?</h3>
-                        <p class="hint">Clique para ver a resposta</p>
+                        <div class="card-number">3</div>
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Como a energia solar ajuda o agronegócio?</h3>
+                        <p class="hint"><i class="fas fa-hand-pointer"></i> Clique para ver a resposta</p>
                     </div>
                     <div class="flashcard-back">
-                        <h3>✅ Resposta</h3>
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Resposta</h3>
                         <p>
                             A energia solar <strong>reduz custos com eletricidade</strong>,
                             diminui a dependência de combustíveis fósseis e torna as
@@ -360,28 +609,35 @@ Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pe
 
     <!-- Rodapé -->
     <footer>
-        <p>
-            Endereço: Av. Sustentável, 1000, Brasília - DF
-        </p>
-
-        <p>
-            Telefone: (61) 9989-5330
-        </p>
-
-        <p>
-            E-mail: contato@agroforte.com.br
-        </p>
-
-        <p>
-            Redes Sociais: @AgroForteOficial
-        </p>
-
-        <p>
-            © 2025 Agro Forte - Todos os direitos reservados.
-        </p>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-leaf"></i>
+                <h3>AGRO FORTE</h3>
+            </div>
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Sustentável, 1000, Brasília - DF</p>
+                <p><i class="fas fa-phone"></i> (61) 9989-5330</p>
+                <p><i class="fas fa-envelope"></i> contato@agroforte.com.br</p>
+                <p><i class="fas fa-share-alt"></i> @AgroForteOficial</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Agro Forte - Todos os direitos reservados. <i class="fas fa-heart"></i> Feito com sustentabilidade</p>
+        </div>
     </footer>
 
-    <!-- Script no final do body (melhor prática de performance) -->
+    <!-- Botão voltar ao topo -->
+    <button class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Script no final do body -->
     <script src="script.js"></script>
 
 </body>
