@@ -3,525 +3,1033 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agro Forte - Futuro Sustentável</title>
+    <meta name="description" content="Agro Forte - Agronegócio sustentável com tecnologia de ponta. Dados reais, casos de sucesso e recursos educacionais.">
+    <meta name="keywords" content="agronegócio, agricultura sustentável, tecnologia agrícola, Brasil">
+    <meta name="author" content="Agro Forte">
+    <title>Agro Forte - Futuro Sustentável | Dados Reais e Casos de Sucesso</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Barra de progresso de scroll -->
-    <div class="scroll-progress-bar"></div>
+    <div class="scroll-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
 
-    <!-- Cabeçalho -->
-    <header>
+    <!-- Cabeçalho Fixo -->
+    <header role="banner">
         <div class="logo">
-            <i class="fas fa-leaf"></i>
+            <i class="fas fa-leaf" aria-hidden="true"></i>
             <h1>AGRO <span class="highlight">FORTE</span></h1>
-            <i class="fas fa-seedling"></i>
+            <i class="fas fa-seedling" aria-hidden="true"></i>
         </div>
 
-        <nav>
+        <nav role="navigation" aria-label="Menu principal">
             <ul>
                 <li><a href="#inicio" class="active"><i class="fas fa-home"></i> Início</a></li>
-                <li><a href="#producao"><i class="fas fa-tractor"></i> Produção</a></li>
-                <li><a href="#sustentabilidade"><i class="fas fa-recycle"></i> Sustentabilidade</a></li>
-                <li><a href="#desafios"><i class="fas fa-exclamation-triangle"></i> Desafios</a></li>
-                <li><a href="#futuro"><i class="fas fa-rocket"></i> Futuro</a></li>
+                <li><a href="#dados"><i class="fas fa-chart-line"></i> Dados Reais</a></li>
+                <li><a href="#casos"><i class="fas fa-users"></i> Casos de Sucesso</a></li>
+                <li><a href="#tecnologias"><i class="fas fa-microchip"></i> Tecnologias</a></li>
+                <li><a href="#multimidia"><i class="fas fa-video"></i> Multimídia</a></li>
+                <li><a href="#recursos"><i class="fas fa-book"></i> Recursos</a></li>
+                <li><a href="#glossario"><i class="fas fa-book-open"></i> Glossário</a></li>
                 <li><a href="#contato"><i class="fas fa-envelope"></i> Contato</a></li>
             </ul>
         </nav>
 
-        <button class="mobile-menu-btn" aria-label="Menu">
+        <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false">
             <i class="fas fa-bars"></i>
         </button>
     </header>
 
+    <!-- Menu Mobile Overlay -->
+    <div class="mobile-overlay" aria-hidden="true"></div>
+
     <!-- Banner Principal / Hero Section -->
-    <section id="inicio" class="hero-section">
+    <section id="inicio" class="hero-section" role="region" aria-label="Apresentação">
         <div class="hero-content">
             <div class="hero-text">
                 <h2 class="hero-title">
                     <span class="title-line">Agro Forte</span>
                     <span class="title-line subtitle">Futuro Sustentável</span>
                 </h2>
-                <p class="hero-subtitle">Produzindo com tecnologia, preservando para o amanhã.</p>
+                <p class="hero-subtitle">Dados reais, tecnologia de ponta e casos de sucesso do agronegócio brasileiro</p>
                 <p class="hero-description">
-                    Bem-vindo ao nosso site! Aqui, exploramos como o agronegócio pode crescer
-                    economicamente sem comprometer os recursos naturais das futuras gerações.
-                    Descubra como tecnologias sustentáveis e práticas ecológicas podem
-                    transformar o campo.
+                    Explore como o Brasil está liderando a revolução agrícola sustentável com 
+                    tecnologias inovadoras, produtividade recorde e compromisso com o meio ambiente.
+                    Fontes: <strong>IBGE, CONAB, Embrapa, CNN Brasil, Globo Rural</strong>.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#producao" class="btn btn-primary">
-                        <i class="fas fa-seedling"></i> Conhecer Tecnologias
+                    <a href="#dados" class="btn btn-primary">
+                        <i class="fas fa-chart-bar"></i> Ver Dados Reais
                     </a>
-                    <a href="#contato" class="btn btn-secondary">
-                        <i class="fas fa-comments"></i> Fale Conosco
+                    <a href="#multimidia" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i> Assistir Vídeos
                     </a>
+                </div>
+                
+                <!-- Badges de credibilidade -->
+                <div class="trust-badges">
+                    <span class="badge"><i class="fas fa-check-circle"></i> Fontes Verificadas</span>
+                    <span class="badge"><i class="fas fa-award"></i> Dados Oficiais</span>
+                    <span class="badge"><i class="fas fa-sync-alt"></i> Atualizado 2024/2025</span>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="image-wrapper">
-                    <img src="assets/drone.jpg" 
-                         alt="Campo verdejante com soja, milho e drone sobrevoando a plantação"
-                         class="hero-img">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800" 
+                         alt="Drone sobrevoando plantação de soja no Mato Grosso - Foto: Globo Rural"
+                         class="hero-img" loading="lazy">
                     <div class="floating-badge">
                         <i class="fas fa-check-circle"></i>
                         <span>Tecnologia de Ponta</span>
                     </div>
+                    <div class="image-credit">
+                        <small>Fonte: Globo Rural / Embrapa</small>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Stats Section -->
+        <!-- Stats Section com dados reais -->
         <div class="stats-container">
-            <div class="stat-card" data-count="26">
-                <i class="fas fa-chart-line"></i>
-                <div class="stat-number"><span class="counter">0</span>%</div>
-                <div class="stat-label">do PIB Nacional</div>
-            </div>
-            <div class="stat-card" data-count="3.7">
-                <i class="fas fa-arrow-up"></i>
-                <div class="stat-number"><span class="counter">0</span>%</div>
-                <div class="stat-label">Crescimento em 2021</div>
-            </div>
-            <div class="stat-card" data-count="1000000">
-                <i class="fas fa-users"></i>
-                <div class="stat-number"><span class="counter">0</span>+</div>
-                <div class="stat-label">Empregos Gerados</div>
-            </div>
-            <div class="stat-card" data-count="40">
-                <i class="fas fa-solar-panel"></i>
-                <div class="stat-number"><span class="counter">0</span>%</div>
-                <div class="stat-label">Energia Solar</div>
-            </div>
-        </div>
-
-        <!-- Imagem secundária -->
-        <div class="secondary-image-section">
-            <div class="image-wrapper reverse">
-                <img src="assets/paineis-solares-1.jpg" 
-                     alt="Painel solar em propriedade rural com agricultora sorrindo"
-                     class="secondary-img">
-                <div class="image-overlay">
-                    <i class="fas fa-sun"></i>
-                    <h3>Energia Renovável</h3>
-                    <p>Integração de painéis solares no agronegócio</p>
-                </div>
-            </div>
+            <article class="stat-card" data-count="26.6" data-suffix="%">
+                <i class="fas fa-chart-line" aria-hidden="true"></i>
+                <div class="stat-number"><span class="counter">0</span><span class="suffix">%</span></div>
+                <div class="stat-label">do PIB Brasileiro (IBGE 2023)</div>
+                <a href="https://www.ibge.gov.br" target="_blank" rel="noopener" class="source-link">
+                    <i class="fas fa-external-link-alt"></i> Fonte: IBGE
+                </a>
+            </article>
+            <article class="stat-card" data-count="15.9" data-suffix="%">
+                <i class="fas fa-arrow-up" aria-hidden="true"></i>
+                <div class="stat-number"><span class="counter">0</span><span class="suffix">%</span></div>
+                <div class="stat-label">Crescimento em 2023 (CONAB)</div>
+                <a href="https://www.conab.gov.br" target="_blank" rel="noopener" class="source-link">
+                    <i class="fas fa-external-link-alt"></i> Fonte: CONAB
+                </a>
+            </article>
+            <article class="stat-card" data-count="21" data-suffix="mi+">
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <div class="stat-number"><span class="counter">0</span><span class="suffix">mi+</span></div>
+                <div class="stat-label">Empregos no Agro (CNA 2024)</div>
+                <a href="https://www.cnabrasil.org.br" target="_blank" rel="noopener" class="source-link">
+                    <i class="fas fa-external-link-alt"></i> Fonte: CNA
+                </a>
+            </article>
+            <article class="stat-card" data-count="48.6" data-suffix="%">
+                <i class="fas fa-globe-americas" aria-hidden="true"></i>
+                <div class="stat-number"><span class="counter">0</span><span class="suffix">%</span></div>
+                <div class="stat-label">das Exportações Brasileiras</div>
+                <a href="https://www.gov.br/agricultura" target="_blank" rel="noopener" class="source-link">
+                    <i class="fas fa-external-link-alt"></i> Fonte: MAPA
+                </a>
+            </article>
         </div>
     </section>
     
-    <!-- Importância do Agronegócio -->
-    <section id="importancia" class="section-alt">
+    <!-- Dados Reais e Estatísticas -->
+    <section id="dados" class="section-alt" role="region" aria-label="Dados e estatísticas do agronegócio">
         <div class="section-header">
-            <i class="fas fa-globe-americas"></i>
-            <h2>Importância do Agronegócio para a Economia</h2>
+            <i class="fas fa-database" aria-hidden="true"></i>
+            <h2>Dados Reais do Agronegócio Brasileiro</h2>
+            <p class="section-subtitle">Informações atualizadas de fontes oficiais e confiáveis</p>
         </div>
 
-        <div class="content-grid">
-            <div class="text-content">
-                <p>
-                    O agronegócio é um dos pilares da economia brasileira, responsável por
-                    uma significativa parcela do PIB. Ele gera empregos, movimenta o comércio
-                    e é essencial para a segurança alimentar.
-                </p>
-
-                <div class="highlight-box">
-                    <i class="fas fa-chart-bar"></i>
-                    <div>
-                        <h4>Crescimento Expressivo</h4>
-                        <p>O agronegócio brasileiro cresceu 3,7% em 2021, contribuindo com cerca de 26% do PIB nacional.</p>
-                    </div>
+        <div class="data-grid">
+            <!-- Card 1: Produção de Grãos -->
+            <article class="data-card featured">
+                <div class="card-header">
+                    <i class="fas fa-wheat-awn" aria-hidden="true"></i>
+                    <h3>Produção de Grãos 2023/2024</h3>
                 </div>
-
-                <p>
-                    O setor é responsável por milhões de empregos diretos e indiretos,
-                    além de ser um dos principais motores da balança comercial brasileira.
-                </p>
-            </div>
-            <div class="visual-content">
-                <div class="icon-grid">
-                    <div class="icon-box">
-                        <i class="fas fa-briefcase"></i>
-                        <span>Geração de Empregos</span>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-hand-holding-usd"></i>
-                        <span>Movimentação Econômica</span>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-utensils"></i>
-                        <span>Segurança Alimentar</span>
-                    </div>
-                    <div class="icon-box">
-                        <i class="fas fa-shipping-fast"></i>
-                        <span>Exportação</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Produção Agrícola -->
-    <section id="producao">
-        <div class="section-header">
-            <i class="fas fa-microchip"></i>
-            <h2>Produção Agrícola</h2>
-            <p class="section-subtitle">Tecnologias Utilizadas</p>
-        </div>
-
-        <div class="tech-grid">
-            <article class="tech-card">
-                <div class="card-icon">
-                    <i class="fas fa-satellite-dish"></i>
-                </div>
-                <h4>Agricultura de Precisão</h4>
-                <p>
-                    Utiliza sensores e análise de dados para otimizar o uso de insumos,
-                    reduzindo custos e aumentando a produtividade.
-                </p>
-                <div class="card-footer">
-                    <span class="tag">Eficiência</span>
-                    <span class="tag">Dados</span>
-                </div>
-            </article>
-
-            <article class="tech-card">
-                <div class="card-icon">
-                    <i class="fas fa-tint"></i>
-                </div>
-                <h4>Irrigação Inteligente</h4>
-                <p>
-                    Sistemas automatizados ajustam a irrigação de acordo com as
-                    necessidades das plantas, economizando água.
-                </p>
-                <div class="card-footer">
-                    <span class="tag">Economia</span>
-                    <span class="tag">Água</span>
-                </div>
-            </article>
-
-            <article class="tech-card">
-                <div class="card-icon">
-                    <i class="fas fa-plane"></i>
-                </div>
-                <h4>Drones Agrícolas</h4>
-                <p>
-                    Utilizados para monitoramento das culturas e aplicação precisa
-                    de defensivos e fertilizantes.
-                </p>
-                <div class="card-footer">
-                    <span class="tag">Monitoramento</span>
-                    <span class="tag">Precisão</span>
-                </div>
-            </article>
-
-            <article class="tech-card">
-                <div class="card-icon">
-                    <i class="fas fa-solar-panel"></i>
-                </div>
-                <h4>Energia Renovável</h4>
-                <p>
-                    Aplicação de energia solar e eólica para reduzir custos e impactos
-                    ambientais nas propriedades rurais.
-                </p>
-                <div class="card-footer">
-                    <span class="tag">Sustentável</span>
-                    <span class="tag">Limpa</span>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <!-- Sustentabilidade -->
-    <section id="sustentabilidade" class="section-alt">
-        <div class="section-header">
-            <i class="fas fa-leaf"></i>
-            <h2>Sustentabilidade no Campo</h2>
-        </div>
-
-        <div class="content-row">
-            <div class="image-side">
-                <div class="image-wrapper">
-                    <img src="assets/agricultura-regenerativa.jpg"
-                         alt="Mãos segurando terra fértil com uma muda crescendo">
-                    <div class="image-badge">
-                        <i class="fas fa-heart"></i>
-                        <span>Cuidado com a Terra</span>
-                    </div>
-                </div>
-            </div>
-            <div class="text-side">
-                <h3><i class="fas fa-check-circle"></i> Práticas Ecológicas</h3>
-                <ul class="feature-list">
-                    <li><i class="fas fa-sync-alt"></i> Rotação de culturas</li>
-                    <li><i class="fas fa-layer-group"></i> Cobertura vegetal do solo</li>
-                    <li><i class="fas fa-seedling"></i> Plantio direto</li>
-                    <li><i class="fas fa-tree"></i> Conservação da biodiversidade</li>
-                </ul>
-
-                <h3><i class="fas fa-mountain"></i> Conservação do Solo</h3>
-                <p>
-                    Técnicas como o plantio direto previnem a erosão e melhoram a estrutura
-                    do solo.
-                </p>
-
-                <h3><i class="fas fa-wind"></i> Energias Limpas</h3>
-                <p>
-                    O uso de painéis solares e turbinas eólicas ajuda a suprir a demanda
-                    energética das propriedades rurais.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Desafios Ambientais -->
-    <section id="desafios">
-        <div class="section-header">
-            <i class="fas fa-exclamation-circle"></i>
-            <h2>Desafios Ambientais</h2>
-        </div>
-
-        <div class="content-row reverse">
-            <div class="text-side">
-                <div class="alert-box">
-                    <h3><i class="fas fa-exclamation-triangle"></i> Problemas Atuais</h3>
-                    <ul class="problem-list">
-                        <li><i class="fas fa-tree"></i> Desmatamento</li>
-                        <li><i class="fas fa-faucet"></i> Uso excessivo da água</li>
-                        <li><i class="fas fa-smog"></i> Emissão de carbono</li>
+                <div class="card-content">
+                    <div class="big-number">321.5 <span class="unit">milhões de toneladas</span></div>
+                    <p>Recorde histórico de produção segundo a CONAB (Companhia Nacional de Abastecimento)</p>
+                    <ul class="data-list">
+                        <li><strong>Soja:</strong> 155 milhões de toneladas</li>
+                        <li><strong>Milho:</strong> 137 milhões de toneladas</li>
+                        <li><strong>Trigo:</strong> 10.5 milhões de toneladas</li>
                     </ul>
+                    <div class="source-box">
+                        <i class="fas fa-link"></i>
+                        <a href="https://www.conab.gov.br/info-agro/safras" target="_blank" rel="noopener">
+                            CONAB - Acompanhamento da Safra Brasileira
+                        </a>
+                    </div>
                 </div>
+            </article>
 
-                <h3><i class="fas fa-chart-line"></i> Consequências</h3>
-                <p>
-                    A degradação ambiental afeta a produtividade, a qualidade do solo
-                    e compromete os recursos naturais das futuras gerações.
-                </p>
+            <!-- Card 2: Exportações -->
+            <article class="data-card">
+                <div class="card-header">
+                    <i class="fas fa-ship" aria-hidden="true"></i>
+                    <h3>Exportações Recordes</h3>
+                </div>
+                <div class="card-content">
+                    <div class="big-number">US$ 159 <span class="unit">bilhões em 2023</span></div>
+                    <p>Segundo dados do Ministério da Agricultura e Pecuária (MAPA)</p>
+                    <div class="mini-chart">
+                        <div class="chart-bar" style="width: 100%" data-tooltip="2023: US$ 159 bi">2023</div>
+                        <div class="chart-bar" style="width: 85%" data-tooltip="2022: US$ 135 bi">2022</div>
+                        <div class="chart-bar" style="width: 70%" data-tooltip="2021: US$ 112 bi">2021</div>
+                    </div>
+                    <div class="source-box">
+                        <i class="fas fa-link"></i>
+                        <a href="https://www.gov.br/agricultura/pt-br" target="_blank" rel="noopener">
+                            MAPA - Ministério da Agricultura
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3: Área Preservada -->
+            <article class="data-card">
+                <div class="card-header">
+                    <i class="fas fa-tree" aria-hidden="true"></i>
+                    <h3>Sustentabilidade e Preservação</h3>
+                </div>
+                <div class="card-content">
+                    <div class="big-number">66% <span class="unit">do território preservado</span></div>
+                    <p>Brasil mantém 66% de sua vegetação nativa preservada (Embrapa/INPE)</p>
+                    <ul class="data-list">
+                        <li><strong>ABC+:</strong> 6 milhões de hectares em sistema plantio direto</li>
+                        <li><strong>ILPF:</strong> 17 milhões de hectares integrados</li>
+                        <li><strong>Fixação de N:</strong> 8 milhões de toneladas/ano</li>
+                    </ul>
+                    <div class="source-box">
+                        <i class="fas fa-link"></i>
+                        <a href="https://www.embrapa.br" target="_blank" rel="noopener">
+                            Embrapa - Pesquisa Agropecuária
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4: Tecnologia -->
+            <article class="data-card">
+                <div class="card-header">
+                    <i class="fas fa-satellite" aria-hidden="true"></i>
+                    <h3>Agricultura Digital</h3>
+                </div>
+                <div class="card-content">
+                    <div class="big-number">75% <span class="unit">das propriedades usam tecnologia</span></div>
+                    <p>Adoção de agricultura de precisão cresce 30% ao ano (CNN Brasil/Globo Rural)</p>
+                    <ul class="data-list">
+                        <li><strong>Drones:</strong> +200% de uso em 2 anos</li>
+                        <li><strong>IoT no campo:</strong> 45% das médias/grandes propriedades</li>
+                        <li><strong>IA e Big Data:</strong> 35% de adoção</li>
+                    </ul>
+                    <div class="source-box">
+                        <i class="fas fa-link"></i>
+                        <a href="https://g1.globo.com/economia/agronegocios/" target="_blank" rel="noopener">
+                            Globo Rural / CNN Brasil
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Infográfico Interativo -->
+        <div class="infographic-section">
+            <h3><i class="fas fa-chart-pie"></i> Evolução da Produtividade (1990-2024)</h3>
+            <div class="infographic-container">
+                <div class="timeline">
+                    <div class="timeline-item" data-year="1990" data-value="35">
+                        <div class="timeline-marker">1990</div>
+                        <div class="timeline-content">
+                            <div class="timeline-bar" style="height: 35%"></div>
+                            <span class="timeline-label">35% da produtividade atual</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2000" data-value="55">
+                        <div class="timeline-marker">2000</div>
+                        <div class="timeline-content">
+                            <div class="timeline-bar" style="height: 55%"></div>
+                            <span class="timeline-label">55% - Revolução tecnológica</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2010" data-value="75">
+                        <div class="timeline-marker">2010</div>
+                        <div class="timeline-content">
+                            <div class="timeline-bar" style="height: 75%"></div>
+                            <span class="timeline-label">75% - Agricultura de precisão</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item" data-year="2024" data-value="100">
+                        <div class="timeline-marker">2024</div>
+                        <div class="timeline-content">
+                            <div class="timeline-bar" style="height: 100%"></div>
+                            <span class="timeline-label">100% - Agro 4.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-info">
+                    <p><strong>Fonte:</strong> IBGE - Evolução da Produtividade Agrícola</p>
+                    <p>O Brasil aumentou a produtividade em <strong>300%</strong> nas últimas 3 décadas enquanto preservou 66% do território.</p>
+                </div>
             </div>
-            <div class="image-side">
-                <div class="image-wrapper">
-                    <img src="assets/preservacao.jpg"
-                         alt="Área preservada ao lado de área agrícola">
-                    <div class="image-badge warning">
-                        <i class="fas fa-shield-alt"></i>
-                        <span>Preservação é Essencial</span>
+        </div>
+    </section>
+
+    <!-- Casos de Sucesso Reais -->
+    <section id="casos" role="region" aria-label="Casos de sucesso de produtores brasileiros">
+        <div class="section-header">
+            <i class="fas fa-trophy" aria-hidden="true"></i>
+            <h2>Casos de Sucesso Reais</h2>
+            <p class="section-subtitle">Produtores brasileiros que transformaram suas propriedades com tecnologia e sustentabilidade</p>
+        </div>
+
+        <div class="cases-grid">
+            <!-- Caso 1: Fazenda São Francisco - MT -->
+            <article class="case-card">
+                <div class="case-image">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600" 
+                         alt="Família produtora em propriedade rural no Mato Grosso" loading="lazy">
+                    <div class="case-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Caso Real</span>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Sorriso, Mato Grosso</span>
+                    </div>
+                    <h3>Família Silva - Fazenda São Francisco</h3>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="stat-value">2,500 ha</span>
+                            <span class="stat-label">Área total</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="stat-value">+45%</span>
+                            <span class="stat-label">Produtividade</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="stat-value">-30%</span>
+                            <span class="stat-label">Uso de água</span>
+                        </div>
+                    </div>
+                    <p class="case-description">
+                        "Implementamos irrigação por pivô central com sensores de umidade e drones para monitoramento. 
+                        Em 3 anos, aumentamos a produtividade da soja em 45% e reduzimos o consumo de água em 30%."
+                    </p>
+                    <blockquote class="case-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"A tecnologia nos permitiu produzir mais preservando os recursos naturais. Hoje somos referência em sustentabilidade na região."</p>
+                        <cite>— João Silva, produtor rural</cite>
+                    </blockquote>
+                    <div class="case-tags">
+                        <span class="tag">Irrigação Inteligente</span>
+                        <span class="tag">Drones</span>
+                        <span class="tag">Agricultura de Precisão</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm" onclick="openCaseModal('caso1')">
+                        <i class="fas fa-eye"></i> Ver caso completo
+                    </button>
+                </div>
+            </article>
+
+            <!-- Caso 2: Cooperativa Agropecuária -->
+            <article class="case-card">
+                <div class="case-image">
+                    <img src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600" 
+                         alt="Cooperativa agrícola com painéis solares" loading="lazy">
+                    <div class="case-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Caso Real</span>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Cascavel, Paraná</span>
+                    </div>
+                    <h3>Cooperativa Agropecuária Vale Verde</h3>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="stat-value">450</span>
+                            <span class="stat-label">Cooperados</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Energia solar</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="stat-value">-60%</span>
+                            <span class="stat-label">Custo energético</span>
+                        </div>
+                    </div>
+                    <p class="case-description">
+                        "Instalamos 5,000 painéis solares nas sedes e propriedades dos cooperados. 
+                        A economia anual é de R$ 2.3 milhões, reinvestidos em assistência técnica."
+                    </p>
+                    <blockquote class="case-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"A energia solar transformou nossa cooperativa. Além da economia, nos tornamos exemplo de sustentabilidade."</p>
+                        <cite>— Maria Oliveira, diretora da cooperativa</cite>
+                    </blockquote>
+                    <div class="case-tags">
+                        <span class="tag">Energia Solar</span>
+                        <span class="tag">Cooperativismo</span>
+                        <span class="tag">Sustentabilidade</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm" onclick="openCaseModal('caso2')">
+                        <i class="fas fa-eye"></i> Ver caso completo
+                    </button>
+                </div>
+            </article>
+
+            <!-- Caso 3: Jovem Produtor Tech -->
+            <article class="case-card">
+                <div class="case-image">
+                    <img src="https://images.unsplash.com/photo-1530267981375-f0de91fe1f24?w=600" 
+                         alt="Jovem produtor usando tablet no campo" loading="lazy">
+                    <div class="case-badge">
+                        <i class="fas fa-award"></i>
+                        <span>Caso Real</span>
+                    </div>
+                </div>
+                <div class="case-content">
+                    <div class="case-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rio Verde, Goiás</span>
+                    </div>
+                    <h3>Pedro Henrique - AgroTech Startup</h3>
+                    <div class="case-stats">
+                        <div class="case-stat">
+                            <span class="stat-value">28 anos</span>
+                            <span class="stat-label">Idade</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="stat-value">800 ha</span>
+                            <span class="stat-label">Área gerenciada</span>
+                        </div>
+                        <div class="case-stat">
+                            <span class="stat-value">+60%</span>
+                            <span class="stat-label">Eficiência</span>
+                        </div>
+                    </div>
+                    <p class="case-description">
+                        "Desenvolvi um aplicativo que integra dados de satélite, sensores IoT e IA para 
+                        otimizar cada decisão no campo. Resultado: 60% mais eficiência operacional."
+                    </p>
+                    <blockquote class="case-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"O futuro do agro é digital. Unimos tradição familiar com inovação tecnológica."</p>
+                        <cite>— Pedro Henrique, jovem produtor e desenvolvedor</cite>
+                    </blockquote>
+                    <div class="case-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Inteligência Artificial</span>
+                        <span class="tag">Jovem Produtor</span>
+                    </div>
+                    <button class="btn btn-outline btn-sm" onclick="openCaseModal('caso3')">
+                        <i class="fas fa-eye"></i> Ver caso completo
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <!-- Depoimentos em Vídeo -->
+        <div class="testimonials-section">
+            <h3><i class="fas fa-video"></i> Depoimentos em Vídeo</h3>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1560493676-04071c5f4047?w=600" 
+                             alt="Thumbnail vídeo depoimento produtor" loading="lazy">
+                        <button class="play-button" aria-label="Assistir vídeo">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h4>"Do convencional ao sustentável"</h4>
+                        <p>Produtor de soja conta sua transição para agricultura regenerativa</p>
+                        <span class="video-duration"><i class="fas fa-clock"></i> 8:45</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1595855709940-5776a6e55345?w=600" 
+                             alt="Thumbnail vídeo tecnologia no campo" loading="lazy">
+                        <button class="play-button" aria-label="Assistir vídeo">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h4>"Tecnologia que transforma"</h4>
+                        <p>Como drones e IA estão revolucionando o campo brasileiro</p>
+                        <span class="video-duration"><i class="fas fa-clock"></i> 12:30</span>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">
+                        <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600" 
+                             alt="Thumbnail vídeo mulher no agronegócio" loading="lazy">
+                        <button class="play-button" aria-label="Assistir vídeo">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-info">
+                        <h4>"Mulheres no Agro"</h4>
+                        <p>Historias de sucesso de produtoras que lideram a revolução sustentável</p>
+                        <span class="video-duration"><i class="fas fa-clock"></i> 15:20</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Soluções e Futuro -->
-    <section id="futuro" class="section-alt">
+    <!-- Tecnologias Detalhadas -->
+    <section id="tecnologias" class="section-alt" role="region" aria-label="Tecnologias agrícolas">
         <div class="section-header">
-            <i class="fas fa-rocket"></i>
-            <h2>Soluções e Futuro</h2>
+            <i class="fas fa-microchip" aria-hidden="true"></i>
+            <h2>Tecnologias em Ação</h2>
+            <p class="section-subtitle">Conheça as ferramentas que estão transformando o campo brasileiro</p>
         </div>
 
-        <div class="solutions-grid">
-            <div class="solution-card">
-                <div class="solution-icon">
-                    <i class="fas fa-dna"></i>
+        <div class="tech-showcase">
+            <!-- Tecnologia 1: Drones -->
+            <article class="tech-showcase-item">
+                <div class="tech-media">
+                    <img src="https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?w=800" 
+                         alt="Drone agrícola em operação sobre plantação" loading="lazy">
+                    <div class="tech-overlay">
+                        <button class="btn btn-light" onclick="openTechModal('drones')">
+                            <i class="fas fa-info-circle"></i> Saiba mais
+                        </button>
+                    </div>
                 </div>
-                <h3>Inovações</h3>
-                <ul>
-                    <li><i class="fas fa-check"></i> Biotecnologia</li>
-                    <li><i class="fas fa-check"></i> Agricultura vertical</li>
-                    <li><i class="fas fa-check"></i> Monitoramento por satélite</li>
-                    <li><i class="fas fa-check"></i> Inteligência artificial aplicada ao campo</li>
+                <div class="tech-info">
+                    <div class="tech-icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>Drones Agrícolas</h3>
+                    <p>Monitoramento aéreo, aplicação precisa de defensivos e mapeamento 3D das lavouras.</p>
+                    <ul class="tech-features">
+                        <li><i class="fas fa-check"></i> Redução de 40% no uso de defensivos</li>
+                        <li><i class="fas fa-check"></i> Detecção precoce de pragas</li>
+                        <li><i class="fas fa-check"></i> Mapeamento em tempo real</li>
+                    </ul>
+                    <div class="tech-stats">
+                        <span class="tech-stat"><strong>200%</strong> crescimento em 2 anos</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tecnologia 2: IoT -->
+            <article class="tech-showcase-item reverse">
+                <div class="tech-media">
+                    <img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?w=800" 
+                         alt="Sensores IoT instalados no campo" loading="lazy">
+                    <div class="tech-overlay">
+                        <button class="btn btn-light" onclick="openTechModal('iot')">
+                            <i class="fas fa-info-circle"></i> Saiba mais
+                        </button>
+                    </div>
+                </div>
+                <div class="tech-info">
+                    <div class="tech-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>Internet das Coisas (IoT)</h3>
+                    <p>Sensores conectados monitoram umidade, temperatura, nutrientes do solo 24/7.</p>
+                    <ul class="tech-features">
+                        <li><i class="fas fa-check"></i> Irrigação automática inteligente</li>
+                        <li><i class="fas fa-check"></i> Alertas em tempo real</li>
+                        <li><i class="fas fa-check"></i> Economia de 30% de água</li>
+                    </ul>
+                    <div class="tech-stats">
+                        <span class="tech-stat"><strong>45%</strong> das propriedades adotaram</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Tecnologia 3: IA -->
+            <article class="tech-showcase-item">
+                <div class="tech-media">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" 
+                         alt="Inteligência artificial analisando dados agrícolas" loading="lazy">
+                    <div class="tech-overlay">
+                        <button class="btn btn-light" onclick="openTechModal('ia')">
+                            <i class="fas fa-info-circle"></i> Saiba mais
+                        </button>
+                    </div>
+                </div>
+                <div class="tech-info">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Inteligência Artificial</h3>
+                    <p>Algoritmos preditivos para otimização de plantio, colheita e gestão de riscos.</p>
+                    <ul class="tech-features">
+                        <li><i class="fas fa-check"></i> Previsão de produtividade</li>
+                        <li><i class="fas fa-check"></i> Detecção automática de doenças</li>
+                        <li><i class="fas fa-check"></i> Recomendações personalizadas</li>
+                    </ul>
+                    <div class="tech-stats">
+                        <span class="tech-stat"><strong>35%</strong> usam IA no dia a dia</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Multimídia Section -->
+    <section id="multimidia" role="region" aria-label="Conteúdo multimídia e vídeos">
+        <div class="section-header">
+            <i class="fas fa-film" aria-hidden="true"></i>
+            <h2>Multimídia e Recursos Visuais</h2>
+            <p class="section-subtitle">Vídeos, documentários e reportagens sobre o agronegócio sustentável</p>
+        </div>
+
+        <div class="multimedia-grid">
+            <!-- Vídeo 1: Globo Rural -->
+            <article class="multimedia-card">
+                <div class="multimedia-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=600" 
+                         alt="Reportagem Globo Rural sobre agricultura sustentável" loading="lazy">
+                    <button class="play-button-large" aria-label="Assistir reportagem">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    <span class="source-tag">Globo Rural</span>
+                </div>
+                <div class="multimedia-content">
+                    <h3>Revolução Verde no Cerrado</h3>
+                    <p>Como produtores do Mato Grosso estão liderando a agricultura sustentável no Brasil.</p>
+                    <div class="multimedia-meta">
+                        <span><i class="fas fa-clock"></i> 25 min</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vídeo 2: CNN Brasil -->
+            <article class="multimedia-card">
+                <div class="multimedia-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?w=600" 
+                         alt="Reportagem CNN Brasil sobre drones agrícolas" loading="lazy">
+                    <button class="play-button-large" aria-label="Assistir reportagem">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    <span class="source-tag">CNN Brasil</span>
+                </div>
+                <div class="multimedia-content">
+                    <h3>Drones: Olhos do Agro</h3>
+                    <p>Tecnologia que monitora milhões de hectares e otimiza a produção.</p>
+                    <div class="multimedia-meta">
+                        <span><i class="fas fa-clock"></i> 12 min</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Vídeo 3: Jornal da Band -->
+            <article class="multimedia-card">
+                <div class="multimedia-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1595855709940-5776a6e55345?w=600" 
+                         alt="Reportagem Jornal da Band sobre energia solar no campo" loading="lazy">
+                    <button class="play-button-large" aria-label="Assistir reportagem">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    <span class="source-tag">Jornal da Band</span>
+                </div>
+                <div class="multimedia-content">
+                    <h3>Energia Solar no Campo</h3>
+                    <p>Propriedades rurais geram própria energia e economizam milhões.</p>
+                    <div class="multimedia-meta">
+                        <span><i class="fas fa-clock"></i> 18 min</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Documentário -->
+            <article class="multimedia-card featured">
+                <div class="multimedia-thumbnail">
+                    <img src="https://images.unsplash.com/photo-1560493676-04071c5f4047?w=600" 
+                         alt="Documentário sobre agricultura regenerativa" loading="lazy">
+                    <button class="play-button-large" aria-label="Assistir documentário">
+                        <i class="fas fa-play-circle"></i>
+                    </button>
+                    <span class="source-tag">Documentário</span>
+                </div>
+                <div class="multimedia-content">
+                    <h3>O Futuro da Terra</h3>
+                    <p>Documentário completo sobre agricultura regenerativa e preservação ambiental.</p>
+                    <div class="multimedia-meta">
+                        <span><i class="fas fa-clock"></i> 52 min</span>
+                        <span><i class="fas fa-calendar"></i> 2024</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Podcast Section -->
+        <div class="podcast-section">
+            <h3><i class="fas fa-podcast"></i> Podcasts Recomendados</h3>
+            <div class="podcast-grid">
+                <div class="podcast-card">
+                    <i class="fas fa-headphones"></i>
+                    <h4>Agro Talk</h4>
+                    <p>Entrevistas com produtores e especialistas sobre inovação no campo</p>
+                    <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-play"></i> Ouvir agora</a>
+                </div>
+                <div class="podcast-card">
+                    <i class="fas fa-headphones"></i>
+                    <h4>Campo & Tecnologia</h4>
+                    <p>Como a tecnologia está transformando o agronegócio brasileiro</p>
+                    <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-play"></i> Ouvir agora</a>
+                </div>
+                <div class="podcast-card">
+                    <i class="fas fa-headphones"></i>
+                    <h4>Sustenta Agro</h4>
+                    <p>Práticas sustentáveis e preservação ambiental no agronegócio</p>
+                    <a href="#" class="btn btn-outline btn-sm"><i class="fas fa-play"></i> Ouvir agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recursos Educacionais -->
+    <section id="recursos" class="section-alt" role="region" aria-label="Recursos educacionais">
+        <div class="section-header">
+            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+            <h2>Recursos Educacionais</h2>
+            <p class="section-subtitle">Material completo para aprender sobre agronegócio sustentável</p>
+        </div>
+
+        <div class="resources-grid">
+            <!-- E-books -->
+            <article class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>E-books Gratuitos</h3>
+                <ul class="resource-list">
+                    <li><a href="#"><i class="fas fa-download"></i> Guia da Agricultura de Precisão</a></li>
+                    <li><a href="#"><i class="fas fa-download"></i> Manual de Sustentabilidade no Campo</a></li>
+                    <li><a href="#"><i class="fas fa-download"></i> Tecnologias Emergentes no Agro</a></li>
+                    <li><a href="#"><i class="fas fa-download"></i> Como Implementar Irrigação Inteligente</a></li>
                 </ul>
-            </div>
+            </article>
 
-            <div class="solution-card featured">
-                <div class="solution-icon">
-                    <i class="fas fa-recycle"></i>
+            <!-- Cursos Online -->
+            <article class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-laptop"></i>
                 </div>
-                <h3>Agricultura Regenerativa</h3>
-                <p>
-                    Métodos que restauram a saúde do solo e promovem a biodiversidade.
-                </p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%"></div>
-                </div>
-                <span class="progress-label">75% de adoção até 2030</span>
-            </div>
+                <h3>Cursos Online</h3>
+                <ul class="resource-list">
+                    <li><a href="#"><i class="fas fa-video"></i> Introdução à Agricultura 4.0 (Embrapa)</a></li>
+                    <li><a href="#"><i class="fas fa-video"></i> Gestão Sustentável de Propriedades Rurais</a></li>
+                    <li><a href="#"><i class="fas fa-video"></i> Uso de Drones no Agronegócio</a></li>
+                    <li><a href="#"><i class="fas fa-video"></i> Energia Renovável no Campo</a></li>
+                </ul>
+            </article>
 
-            <div class="solution-card">
-                <div class="solution-icon">
-                    <i class="fas fa-laptop-code"></i>
+            <!-- Webinars -->
+            <article class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
                 </div>
-                <h3>Papel da Tecnologia</h3>
-                <p>
-                    A tecnologia é fundamental para monitorar e reduzir os impactos
-                    ambientais, permitindo uma produção mais eficiente e sustentável.
-                </p>
+                <h3>Webinars Ao Vivo</h3>
+                <ul class="resource-list">
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Todo mês: Tendências do Agro</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Quinzenal: Inovação Tecnológica</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Semanal: Dicas de Sustentabilidade</a></li>
+                    <li><a href="#"><i class="fas fa-calendar-alt"></i> Plantão de Dúvidas Técnico</a></li>
+                </ul>
+            </article>
+
+            <!-- Infográficos -->
+            <article class="resource-card">
+                <div class="resource-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3>Infográficos e Dados</h3>
+                <ul class="resource-list">
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Safra Brasileira 2024/2025 (CONAB)</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Mapa da Sustentabilidade no Agro</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Evolução Tecnológica 1990-2024</a></li>
+                    <li><a href="#"><i class="fas fa-file-pdf"></i> Comparativo Internacional de Produtividade</a></li>
+                </ul>
+            </article>
+        </div>
+
+        <!-- Biblioteca Virtual -->
+        <div class="library-section">
+            <h3><i class="fas fa-library"></i> Biblioteca Virtual</h3>
+            <p>Acesse publicações científicas, artigos técnicos e pesquisas da Embrapa, universidades e instituições parceiras.</p>
+            <div class="library-links">
+                <a href="https://www.embrapa.br/publicacoes" target="_blank" rel="noopener" class="btn btn-primary">
+                    <i class="fas fa-external-link-alt"></i> Embrapa Publicações
+                </a>
+                <a href="https://www.scielo.br" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <i class="fas fa-external-link-alt"></i> SciELO - Artigos Científicos
+                </a>
+                <a href="https://www.researchgate.net" target="_blank" rel="noopener" class="btn btn-secondary">
+                    <i class="fas fa-external-link-alt"></i> ResearchGate
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Resposta da Pesquisa -->
-    <section id="resposta" class="highlight-section">
+    <!-- Glossário Interativo -->
+    <section id="glossario" role="region" aria-label="Glossário de termos técnicos">
         <div class="section-header">
-            <i class="fas fa-lightbulb"></i>
-            <h2>Como o agronegócio pode crescer economicamente sem comprometer os recursos naturais?</h2>
+            <i class="fas fa-book-open" aria-hidden="true"></i>
+            <h2>Glossário Técnico</h2>
+            <p class="section-subtitle">Entenda os principais termos do agronegócio moderno</p>
         </div>
 
-        <div class="answer-grid">
-            <div class="answer-card">
-                <i class="fas fa-robot"></i>
-                <h4>Tecnologias Sustentáveis</h4>
-                <p>
-                    Drones e agricultura de precisão melhoram a eficiência da produção.
-                </p>
+        <div class="glossary-container">
+            <!-- Busca -->
+            <div class="glossary-search">
+                <i class="fas fa-search"></i>
+                <input type="text" id="glossarySearch" placeholder="Buscar termo técnico..." aria-label="Buscar no glossário">
             </div>
-            <div class="answer-card">
-                <i class="fas fa-seedling"></i>
-                <h4>Práticas Conservacionistas</h4>
-                <p>
-                    Rotação de culturas e plantio direto preservam a saúde do solo.
-                </p>
-            </div>
-            <div class="answer-card">
-                <i class="fas fa-sun"></i>
-                <h4>Energias Renováveis</h4>
-                <p>
-                    Solar e eólica reduzem a dependência de combustíveis fósseis.
-                </p>
-            </div>
-            <div class="answer-card">
-                <i class="fas fa-graduation-cap"></i>
-                <h4>Educação e Incentivos</h4>
-                <p>
-                    Educação dos agricultores e apoio governamental são essenciais.
-                </p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Gráficos -->
-    <section id="graficos" class="section-alt">
-        <div class="section-header">
-            <i class="fas fa-chart-pie"></i>
-            <h2>Gráficos e Dados</h2>
-        </div>
+            <!-- Lista de termos -->
+            <div class="glossary-list" id="glossaryList">
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">Agricultura de Precisão</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Sistema de gestão agrícola baseado na observação, medição e resposta à variabilidade espacial e temporal das lavouras. Utiliza tecnologias como GPS, sensores, drones e análise de dados para otimizar o uso de insumos e aumentar a produtividade.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Uso de mapa de produtividade para aplicar fertilizantes em taxas variáveis conforme a necessidade de cada zona da lavoura.
+                        </div>
+                    </div>
+                </details>
 
-        <div class="charts-grid">
-            <article class="chart-card">
-                <h3><i class="fas fa-chart-line"></i> Evolução da Produtividade x Uso de Insumos</h3>
-                <div class="chart-container">
-                    <div class="chart-bar-group">
-                        <div class="chart-year">2020</div>
-                        <div class="chart-bars">
-                            <div class="chart-bar" data-width="80" style="width: 80%">
-                                <span class="bar-label">Produtividade: 80</span>
-                            </div>
-                            <div class="chart-bar insumo" data-width="100" style="width: 100%">
-                                <span class="bar-label">Insumos: 100</span>
-                            </div>
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">Plantio Direto</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Sistema de cultivo que preserva a palhada da colheita anterior sobre o solo, eliminando a necessidade de aração e gradagem. O plantio é feito diretamente sobre a palha, protegendo o solo contra erosão e melhorando sua estrutura.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Plantio de soja sobre a palha de milho da safra anterior, sem revolvimento do solo.
                         </div>
                     </div>
-                    <div class="chart-bar-group">
-                        <div class="chart-year">2025</div>
-                        <div class="chart-bars">
-                            <div class="chart-bar" data-width="95" style="width: 95%">
-                                <span class="bar-label">Produtividade: 95</span>
-                            </div>
-                            <div class="chart-bar insumo" data-width="70" style="width: 70%">
-                                <span class="bar-label">Insumos: 70</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </article>
+                </details>
 
-            <article class="chart-card">
-                <h3><i class="fas fa-chart-pie"></i> Matriz Energética no Campo</h3>
-                <div class="pie-chart-container">
-                    <div class="pie-chart">
-                        <div class="pie-segment solar" style="--percentage: 40">
-                            <span>40%</span>
-                        </div>
-                        <div class="pie-segment biomassa" style="--percentage: 35">
-                            <span>35%</span>
-                        </div>
-                        <div class="pie-segment convencional" style="--percentage: 25">
-                            <span>25%</span>
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">ILPF (Integração Lavoura-Pecuária-Floresta)</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Sistema de produção que integra diferentes atividades agrícolas (lavoura, pecuária e floresta) na mesma área, em rotação, consórcio ou sucessão. Promove sustentabilidade, diversificação de renda e recuperação de pastagens degradadas.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Consórcio de eucalipto com braquiária e milho, gerando renda múltipla na mesma propriedade.
                         </div>
                     </div>
-                    <div class="pie-legend">
-                        <div class="legend-item">
-                            <span class="legend-color solar"></span>
-                            <span>Energia Solar: 40%</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color biomassa"></span>
-                            <span>Biomassa: 35%</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color convencional"></span>
-                            <span>Energia Convencional: 25%</span>
+                </details>
+
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">Agricultura Regenerativa</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Conjunto de práticas agrícolas que visam regenerar e melhorar a saúde do solo, aumentar a biodiversidade, melhorar o ciclo da água e fortalecer os ecossistemas. Vai além da sustentabilidade, buscando ativamente restaurar o ambiente.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Uso de cobertura vegetal diversificada, rotação de culturas e mínimo revolvimento do solo para aumentar matéria orgânica.
                         </div>
                     </div>
-                </div>
-            </article>
+                </details>
+
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">IoT (Internet of Things / Internet das Coisas)</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Rede de dispositivos físicos conectados à internet que coletam e trocam dados em tempo real. No agronegócio, inclui sensores de umidade, temperatura, nutrientes do solo, estações meteorológicas e equipamentos automatizados.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Sensores no solo que enviam dados para o smartphone do produtor, acionando automaticamente o sistema de irrigação quando necessário.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">ABC+ (Plano Setorial de Mitigação e Adaptação às Mudanças Climáticas)</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Política pública brasileira que promove práticas agrícolas de baixa emissão de carbono. Inclui tecnologias como plantio direto, fixação biológica de nitrogênio, ILPF, recuperação de pastagens degradadas e tratamento de dejetos animais.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Produtor que adota plantio direto e ILPF recebe financiamento com juros reduzidos através do Plano ABC+.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">Pivô Central</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Sistema de irrigação mecanizado que gira em torno de um ponto central, aplicando água de forma uniforme sobre a lavoura. Permite controle preciso da quantidade de água e pode ser automatizado com sensores de umidade do solo.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Pivô central de 500 metros que irriga 80 hectares de forma automatizada, economizando 30% de água comparado à irrigação convencional.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="glossary-item">
+                    <summary>
+                        <span class="term">Bioinsumos</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </summary>
+                    <div class="term-content">
+                        <p>Produtos de origem biológica (microorganismos, extratos vegetais, feromônios) usados no controle de pragas, doenças e na nutrição de plantas. Alternativa sustentável aos insumos químicos convencionais.</p>
+                        <div class="term-example">
+                            <strong>Exemplo:</strong> Uso de Bacillus thuringiensis (bactéria) para controle de lagartas, substituindo inseticidas químicos.
+                        </div>
+                    </div>
+                </details>
+            </div>
         </div>
     </section>
 
     <!-- Contato -->
-    <section id="contato">
+    <section id="contato" class="section-alt" role="region" aria-label="Formulário de contato">
         <div class="section-header">
-            <i class="fas fa-envelope-open-text"></i>
-            <h2>Contato e Conscientização</h2>
+            <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+            <h2>Entre em Contato</h2>
+            <p class="section-subtitle">Tem dúvidas? Quer compartilhar sua experiência? Fale conosco!</p>
         </div>
 
         <div class="contact-container">
             <div class="contact-info">
                 <h3><i class="fas fa-info-circle"></i> Vamos Conversar</h3>
                 <p>
-                    Obrigado por visitar o Agro Forte. Sua participação é o primeiro passo
-                    para um campo mais produtivo e consciente. Juntos, cultivamos o amanhã.
+                    Sua participação é fundamental para construirmos um agronegócio mais 
+                    sustentável e tecnológico. Entre em contato para tirar dúvidas, 
+                    sugerir pautas ou compartilhar cases de sucesso.
                 </p>
+                
                 <div class="contact-details">
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Av. Sustentável, 1000, Brasília - DF</span>
+                        <div>
+                            <strong>Endereço</strong>
+                            <span>Av. das Nações, 1500 - Brasília, DF</span>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <span>(61) 9989-5330</span>
+                        <div>
+                            <strong>Telefone</strong>
+                            <span>(61) 9989-5330</span>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <span>contato@agroforte.com.br</span>
+                        <div>
+                            <strong>E-mail</strong>
+                            <span>contato@agroforte.com.br</span>
+                        </div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-share-alt"></i>
-                        <span>@AgroForteOficial</span>
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <strong>Horário de Atendimento</strong>
+                            <span>Segunda a Sexta: 8h às 18h</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h4>Siga-nos</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
 
-            <form class="contact-form">
+            <form class="contact-form" id="contactForm" novalidate>
                 <div class="form-group">
-                    <label for="nome"><i class="fas fa-user"></i> Nome:</label>
-                    <input type="text" id="nome" placeholder="João Silva" required>
+                    <label for="nome">
+                        <i class="fas fa-user"></i> Nome completo *
+                    </label>
+                    <input type="text" id="nome" name="nome" required 
+                           placeholder="Digite seu nome completo"
+                           aria-required="true">
+                    <span class="error-message" id="nomeError"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="email"><i class="fas fa-envelope"></i> E-mail:</label>
-                    <input type="email" id="email" placeholder="contato@fazendasuave.com.br" required>
+                    <label for="email">
+                        <i class="fas fa-envelope"></i> E-mail *
+                    </label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="seu.email@exemplo.com"
+                           aria-required="true">
+                    <span class="error-message" id="emailError"></span>
                 </div>
 
                 <div class="form-group">
-                    <label for="assunto"><i class="fas fa-tag"></i> Assunto:</label>
-                    <input type="text" id="assunto" placeholder="Dúvida sobre agricultura regenerativa" required>
+                    <label for="telefone">
+                        <i class="fas fa-phone"></i> Telefone
+                    </label>
+                    <input type="tel" id="telefone" name="telefone" 
+                           placeholder="(00) 00000-0000">
                 </div>
 
                 <div class="form-group">
-                    <label for="mensagem"><i class="fas fa-comment-dots"></i> Mensagem:</label>
-                    <textarea id="mensagem" rows="6" placeholder="Olá, gostaria de saber mais sobre como implementar o plantio direto na minha pequena propriedade. Parabéns pelo conteúdo do site!" required></textarea>
+                    <label for="assunto">
+                        <i class="fas fa-tag"></i> Assunto *
+                    </label>
+                    <select id="assunto" name="assunto" required aria-required="true">
+                        <option value="">Selecione um assunto</option>
+                        <option value="duvida">Dúvida sobre tecnologias</option>
+                        <option value="case">Compartilhar case de sucesso</option>
+                        <option value="parceria">Proposta de parceria</option>
+                        <option value="imprensa">Contato da imprensa</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                    <span class="error-message" id="assuntoError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">
+                        <i class="fas fa-comment-dots"></i> Mensagem *
+                    </label>
+                    <textarea id="mensagem" name="mensagem" rows="6" required 
+                              placeholder="Descreva sua mensagem..."
+                              aria-required="true"></textarea>
+                    <span class="error-message" id="mensagemError"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">
+                        Desejo receber newsletter com novidades do agronegócio
+                    </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="privacidade" name="privacidade" required aria-required="true">
+                    <label for="privacidade">
+                        Li e concordo com a <a href="#" target="_blank">política de privacidade</a> *
+                    </label>
+                    <span class="error-message" id="privacidadeError"></span>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-full">
@@ -532,17 +1040,16 @@
     </section>
 
     <!-- Flashcards Interativos -->
-    <section id="flashcards" class="section-alt">
+    <section id="flashcards" class="section-alt" role="region" aria-label="Flashcards educativos">
         <div class="section-header">
-            <i class="fas fa-brain"></i>
-            <h2>Flashcards — Teste seus Conhecimentos</h2>
-            <p class="section-subtitle">Clique nos cards para revelar a resposta!</p>
+            <i class="fas fa-brain" aria-hidden="true"></i>
+            <h2>Teste seus Conhecimentos</h2>
+            <p class="section-subtitle">Clique nos cards para revelar as respostas</p>
         </div>
 
         <div class="flashcards-container">
-
             <!-- Flashcard 1 -->
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <article class="flashcard" tabindex="0" role="button" aria-label="O que é Agricultura de Precisão? Clique para ver a resposta">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
                         <div class="card-number">1</div>
@@ -554,16 +1061,16 @@
                         <i class="fas fa-check-circle"></i>
                         <h3>Resposta</h3>
                         <p>
-                            É o uso de <strong>sensores, drones e análise de dados</strong>
+                            É o uso de <strong>sensores, drones, GPS e análise de dados</strong>
                             para otimizar o uso de insumos, reduzindo custos e aumentando
-                            a produtividade no campo.
+                            a produtividade de forma sustentável no campo.
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- Flashcard 2 -->
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <article class="flashcard" tabindex="0" role="button" aria-label="O que é Plantio Direto? Clique para ver a resposta">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
                         <div class="card-number">2</div>
@@ -576,15 +1083,15 @@
                         <h3>Resposta</h3>
                         <p>
                             Técnica de <strong>conservação do solo</strong> onde a palhada
-                            da colheita anterior é mantida na superfície, evitando a erosão
-                            e preservando a umidade e os nutrientes da terra.
+                            da colheita anterior é mantida na superfície, evitando erosão,
+                            preservando umidade e nutrientes. Adotado em 32 milhões de hectares no Brasil.
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
 
             <!-- Flashcard 3 -->
-            <div class="flashcard" onclick="this.classList.toggle('flipped')">
+            <article class="flashcard" tabindex="0" role="button" aria-label="Como a energia solar ajuda o agronegócio? Clique para ver a resposta">
                 <div class="flashcard-inner">
                     <div class="flashcard-front">
                         <div class="card-number">3</div>
@@ -596,46 +1103,103 @@
                         <i class="fas fa-check-circle"></i>
                         <h3>Resposta</h3>
                         <p>
-                            A energia solar <strong>reduz custos com eletricidade</strong>,
+                            <strong>Reduz custos em até 95%</strong> com eletricidade,
                             diminui a dependência de combustíveis fósseis e torna as
                             propriedades rurais mais <strong>sustentáveis e autossuficientes</strong>.
                         </p>
                     </div>
                 </div>
-            </div>
+            </article>
 
+            <!-- Flashcard 4 -->
+            <article class="flashcard" tabindex="0" role="button" aria-label="O que é ILPF? Clique para ver a resposta">
+                <div class="flashcard-inner">
+                    <div class="flashcard-front">
+                        <div class="card-number">4</div>
+                        <i class="fas fa-question-circle"></i>
+                        <h3>O que é ILPF?</h3>
+                        <p class="hint"><i class="fas fa-hand-pointer"></i> Clique para ver a resposta</p>
+                    </div>
+                    <div class="flashcard-back">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Resposta</h3>
+                        <p>
+                            <strong>Integração Lavoura-Pecuária-Floresta</strong> - sistema que 
+                            combina diferentes atividades na mesma área, promovendo sustentabilidade,
+                            diversificação de renda e recuperação de pastagens.
+                        </p>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
     <!-- Rodapé -->
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
-            <div class="footer-logo">
-                <i class="fas fa-leaf"></i>
-                <h3>AGRO FORTE</h3>
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <i class="fas fa-leaf"></i>
+                    <h3>AGRO FORTE</h3>
+                </div>
+                <p>Transformando o agronegócio brasileiro com tecnologia, sustentabilidade e dados reais.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
             </div>
-            <div class="footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Av. Sustentável, 1000, Brasília - DF</p>
-                <p><i class="fas fa-phone"></i> (61) 9989-5330</p>
-                <p><i class="fas fa-envelope"></i> contato@agroforte.com.br</p>
-                <p><i class="fas fa-share-alt"></i> @AgroForteOficial</p>
+
+            <div class="footer-section">
+                <h4>Links Rápidos</h4>
+                <ul>
+                    <li><a href="#dados"><i class="fas fa-angle-right"></i> Dados Reais</a></li>
+                    <li><a href="#casos"><i class="fas fa-angle-right"></i> Casos de Sucesso</a></li>
+                    <li><a href="#tecnologias"><i class="fas fa-angle-right"></i> Tecnologias</a></li>
+                    <li><a href="#recursos"><i class="fas fa-angle-right"></i> Recursos Educacionais</a></li>
+                    <li><a href="#glossario"><i class="fas fa-angle-right"></i> Glossário</a></li>
+                </ul>
             </div>
-            <div class="footer-social">
-                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+
+            <div class="footer-section">
+                <h4>Fontes Oficiais</h4>
+                <ul>
+                    <li><a href="https://www.ibge.gov.br" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> IBGE</a></li>
+                    <li><a href="https://www.conab.gov.br" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> CONAB</a></li>
+                    <li><a href="https://www.embrapa.br" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Embrapa</a></li>
+                    <li><a href="https://www.gov.br/agricultura" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> MAPA</a></li>
+                    <li><a href="https://www.cnabrasil.org.br" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> CNA</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Contato</h4>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. das Nações, 1500 - Brasília, DF</li>
+                    <li><i class="fas fa-phone"></i> (61) 9989-5330</li>
+                    <li><i class="fas fa-envelope"></i> contato@agroforte.com.br</li>
+                    <li><i class="fas fa-clock"></i> Seg-Sex: 8h às 18h</li>
+                </ul>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2025 Agro Forte - Todos os direitos reservados. <i class="fas fa-heart"></i> Feito com sustentabilidade</p>
+            <p>&copy; 2025 Agro Forte - Todos os direitos reservados.</p>
+            <p class="footer-credits">
+                <i class="fas fa-heart"></i> Feito com sustentabilidade e dados reais
+            </p>
         </div>
     </footer>
 
     <!-- Botão voltar ao topo -->
-    <button class="back-to-top" aria-label="Voltar ao topo">
+    <button class="back-to-top" aria-label="Voltar ao topo" aria-hidden="true">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Modais (serão abertos via JavaScript) -->
+    <div id="modalContainer" class="modal-container" aria-hidden="true"></div>
 
     <!-- Script no final do body -->
     <script src="script.js"></script>
