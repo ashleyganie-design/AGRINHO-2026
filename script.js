@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileMenuBtn.setAttribute('aria-expanded', !isExpanded);
         nav.classList.toggle('active');
         overlay.classList.toggle('active');
-        document.body.style.overflow = isExpanded ? '' : 'hidden'; // Evita scroll com menu aberto
+        document.body.style.overflow = isExpanded ? '' : 'hidden';
     }
 
     if (mobileMenuBtn) {
@@ -21,16 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // =========================================================================
-    // 2. BARRA DE PROGRESSO DE SCROLL
+    // 2. BARRA DE PROGRESSO DE SCROLL + BOTÃO VOLTAR AO TOPO
     // =========================================================================
     const progressBar = document.querySelector('.scroll-progress-bar');
+    const backToTopBtn = document.querySelector('.back-to-top');
+
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrollPercent = (scrollTop / scrollHeight) * 100;
         progressBar.style.width = scrollPercent + '%';
         progressBar.setAttribute('aria-valuenow', Math.round(scrollPercent));
+        
+        if (backToTopBtn) {
+            if (scrollTop > 300) backToTopBtn.classList.add('show');
+            else backToTopBtn.classList.remove('show');
+        }
     });
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
     // =========================================================================
     // 3. FLASHCARDS INTERATIVOS (Clique para revelar com animação fluida)
@@ -40,7 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('click', () => {
             card.classList.toggle('flipped');
         });
-        // Acessibilidade: permite virar com Tecla Enter ou Espaço
         card.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
@@ -84,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
             validateField(privacidade, 'privacidadeError', privacidade.checked, 'Você deve concordar com a política de privacidade.');
 
             if (isValid) {
-                // Animação de envio
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
@@ -99,7 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Limpar erro em tempo real ao digitar
         contactForm.querySelectorAll('input, select, textarea').forEach(input => {
             input.addEventListener('input', () => {
                 input.style.borderColor = 'var(--cinza-claro)';
@@ -117,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     playButtons.forEach(btn => {
         btn.addEventListener('click', () => {
-            const videoId = btn.getAttribute('data-video') || 'dQw4w9WgXcQ'; // ID padrão se não houver
+            const videoId = btn.getAttribute('data-video') || 'dQw4w9WgXcQ';
             const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
             
             modalContainer.innerHTML = `
@@ -134,11 +144,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Fechar modal
     const closeModal = () => {
         modalContainer.classList.remove('active');
         modalContainer.setAttribute('aria-hidden', 'true');
-        modalContainer.innerHTML = ''; // Limpa o iframe para parar o áudio
+        modalContainer.innerHTML = '';
         document.body.style.overflow = '';
     };
 
